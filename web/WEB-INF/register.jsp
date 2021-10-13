@@ -1,17 +1,19 @@
-<%-- 
-    Document   : register
-    Created on : Oct 13, 2021, 2:52:22 PM
-    Author     : 786821
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Register</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Shopping List</h1>
+        <form method="POST" value="shoppingList">
+        <div>
+            <label>Username: </label>
+            <input type="text" name="username">
+            <input type="hidden" name="action" value="register">
+            <input type="submit" value="Register Name">
+        </div>
+    </form>
     </body>
 </html>
