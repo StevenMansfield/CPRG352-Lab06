@@ -20,7 +20,7 @@ public class ShoppingListServlet extends HttpServlet {
         if (action != null) {
             if (action.equals("logout")) {
                 session.invalidate(); 
-                getServletContext().getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+                response.sendRedirect("shoppingList"); 
                 return;
             }
         }
@@ -63,7 +63,12 @@ public class ShoppingListServlet extends HttpServlet {
             }
             
             if (action.equals("delete")) {
-                
+                if(request.getParameter("item") != null) {
+                    itemList.remove(request.getParameter("item"));
+                }
+                session.setAttribute("itemList", itemList);
+                getServletContext().getRequestDispatcher("/WEB-INF/shoppingList.jsp").forward(request, response);
+                return;
             }
         }
     }
