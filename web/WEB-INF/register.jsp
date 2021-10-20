@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Shopping List</h1>
-        <form method="POST" value="shoppingList">
+        <form method="POST" action="shoppingList">
         <div>
             <label>Username: </label>
             <input type="text" name="username">
